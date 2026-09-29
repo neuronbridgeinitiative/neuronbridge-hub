@@ -2,10 +2,11 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CONTACT_EMAIL, INSTAGRAM_URL } from "@/lib/site-content";
 
 const links = [
-  ["About", "/about"], ["Our pillars", "/pillars"], ["Opportunities", "/opportunities"],
-  ["Events", "/events"], ["Publications", "/publications"], ["Contact", "/contact"],
+  ["About", "/about"], ["Our Pillars", "/pillars"], ["Opportunities", "/opportunities"],
+  ["Events", "/events"], ["Neurodiversity & Service", "/neurodiversity-service"], ["Publications", "/publications"], ["Contact", "/contact"],
 ] as const;
 
 export function SiteHeader() {
@@ -27,8 +28,8 @@ export function SiteHeader() {
 export function SiteFooter() {
   return <footer className="site-footer"><div className="site-wrap">
     <div className="footer-grid"><div><div className="footer-brand">NeuronBridge<br /><em>Initiative.</em></div><p className="footer-caption">A developing UCLA student organization connecting curiosity, care, and community through neuroscience.</p></div>
-      <div><p className="footer-label">Explore</p><div className="footer-links"><Link to="/about">Our story</Link><Link to="/pillars">Six pillars</Link><Link to="/opportunities">Opportunities</Link><Link to="/events">Events & meetings</Link></div></div>
-      <div><p className="footer-label">Connect</p><div className="footer-links"><Link to="/join">Join the interest list</Link><Link to="/join">Founding members</Link><Link to="/publications">Publications</Link><Link to="/contact">Contact us</Link></div></div>
+      <div><p className="footer-label">Explore</p><div className="footer-links"><Link to="/about">Our story</Link><Link to="/pillars">Six pillars</Link><Link to="/opportunities">Opportunities</Link><Link to="/events">Events & meetings</Link><Link to="/neurodiversity-service">Neurodiversity & service</Link><Link to="/publications">Publications & resources</Link></div></div>
+      <div><p className="footer-label">Connect</p><div className="footer-links"><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a><Link to="/join">Interest list</Link><Link to="/contact">Contact us</Link></div></div>
     </div><div className="footer-bottom"><span>© {new Date().getFullYear()} NeuronBridge Initiative</span><span>Developing student organization · Working toward UCLA registration</span></div>
   </div></footer>;
 }
