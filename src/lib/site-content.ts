@@ -21,4 +21,4 @@ export const opportunities = [
   { title: "Founding leadership", text: "Join early, help define NBI's programs and traditions, and grow into future leadership as the organization develops.", tag: "Founding stage" },
 ];
 export const CONTACT_EMAIL = "contact@neuronbridgeinitiative.org";
-export const INSTAGRAM_URL = "https://www.instagram.com/neuronbridgeinitiative";
+export const INSTAGRAM_URL = "https://www.instagram.com/neuronbridge.initiative/";
