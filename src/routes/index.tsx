@@ -1,24 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import brain from "@/assets/brain-engraving.jpg";
+import neuron from "@/assets/neuron-engraving.jpg";
+import { pillars } from "@/lib/site-content";
+import { Callout, StatusNotice } from "@/components/page-parts";
+export const Route = createFileRoute("/")({ head: () => ({ meta: [{ title: "NeuronBridge Initiative | Neuroscience, Service & Community at UCLA" }, { name: "description", content: "Discover NeuronBridge Initiative, a developing UCLA student organization bringing neuroscience, service, neurodiversity outreach, mentorship, and community together." }, { property: "og:title", content: "NeuronBridge Initiative | UCLA" }, { property: "og:description", content: "A developing student community connecting neuroscience, service, and care at UCLA." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Index });
+function Index() { return <main>
+  <section className="hero"><div className="hero-copy"><span className="eyebrow">A developing UCLA student organization</span><h1 className="hero-title">Where curious minds <em>connect.</em></h1><p className="hero-text">Exploring neuroscience beyond the classroom through service, clinical discovery, neurodiversity outreach, mentorship, and a community built on care.</p><div className="hero-actions"><Link to="/join" className="action-primary">Get involved <ArrowUpRight size={16} /></Link><Link to="/about" className="action-text">Discover our mission <ArrowUpRight size={14} /></Link></div></div><div className="hero-visual"><img src={brain} alt="Vintage anatomical illustration of the human brain" width={1200} height={1504} /><div className="hero-stamp"><span>Fig. 01 — The mind in motion</span><span>NBI / UCLA</span></div></div></section>
+  <div className="ticker"><div className="site-wrap ticker-inner"><span>Neuroscience</span><span>Service</span><span>Neurodiversity</span><span>Mentorship</span><span>Community</span></div></div>
+  <section className="section statement site-wrap"><div><span className="eyebrow">A note on our mission</span></div><div><h2>Science is better when it brings us together.</h2><p>NeuronBridge Initiative is being built for students who want to understand the nervous system and the people behind the science. We imagine a place where academic curiosity becomes meaningful action—in communities, in healthcare, and in the lives of fellow students.</p><Link to="/about" className="action-text">Read our story <ArrowUpRight size={14} /></Link></div></section>
+  <section className="section pillars-preview"><div className="site-wrap"><div className="section-header"><div><span className="eyebrow">What guides us</span><h2 className="section-heading">Six pillars. One purpose.</h2></div><p className="section-intro">A connected approach to learning, serving, and growing together.</p></div><div className="pillar-grid">{pillars.map((p, i) => <div className="pillar-item" key={p.title}><span className="pillar-num">0{i + 1}</span><h3>{p.title}</h3><p>{p.text}</p></div>)}</div><div style={{ marginTop: 30 }}><Link to="/pillars" className="action-text">Explore our pillars <ArrowUpRight size={14} /></Link></div></div></section>
+  <section className="feature-split"><div className="feature-image"><img src={neuron} alt="Vintage illustration of a branching neuron" width={1104} height={912} loading="lazy" /></div><div className="feature-copy"><span className="eyebrow">The founding chapter</span><h2>Be here at the beginning.</h2><p>NBI is still taking shape. If you believe in a more connected, inclusive approach to neuroscience, there's room to help build it. Founding members can share ideas, shape our early projects, and express interest in future leadership.</p><Link to="/join" className="action-text">Explore founding membership <ArrowUpRight size={14} /></Link></div></section>
+  <section className="section-tight site-wrap"><StatusNotice /></section><Callout title="Your curiosity belongs here." label="Join our community" />
+</main>; }
