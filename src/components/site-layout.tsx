@@ -6,7 +6,7 @@ import { CONTACT_EMAIL, INSTAGRAM_URL } from "@/lib/site-content";
 
 const links = [
   ["About", "/about"], ["Our Pillars", "/pillars"], ["Opportunities", "/opportunities"],
-  ["Events", "/events"], ["Neurodiversity & Service", "/neurodiversity-service"], ["Publications", "/publications"], ["Contact", "/contact"],
+  ["Events", "/events"], ["Publications", "/publications"], ["Contact", "/contact"],
 ] as const;
 
 export function SiteHeader() {
@@ -21,7 +21,7 @@ export function SiteHeader() {
     </div>
     <nav className={`nav-bar ${open ? "open" : ""}`} aria-label="Main navigation"><div className="site-wrap nav-inner">
       <div className="nav-links">{links.map(([label, path]) => <Link key={path} to={path} className="nav-link" activeProps={{ className: "nav-link active" }} onClick={() => setOpen(false)}>{label}</Link>)}</div>
-      <Link to="/join" className="nav-join" onClick={() => setOpen(false)}>Get involved <ArrowUpRight size={15} /></Link>
+      <Link to="/join" className="nav-join" onClick={() => setOpen(false)}>Get Involved <ArrowUpRight size={15} /></Link>
     </div></nav>
   </header>;
 }
