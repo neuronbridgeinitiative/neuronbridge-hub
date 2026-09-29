@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep NBI public content in distinct TanStack routes with a shared root shell so each topic has a shareable URL and metadata.
+- Store public interest and contact submissions in private Cloud tables with anonymous insert-only access so visitor details are not publicly readable.
