@@ -27,20 +27,20 @@
   --radius-lg: 4px;
 }
 :root {
-  --background: oklch(0.971 0.016 87);
-  --foreground: oklch(0.25 0.012 55);
-  --card: oklch(0.984 0.012 85);
-  --primary: oklch(0.37 0.085 20);
+  --background: oklch(0.966 0.017 87);
+  --foreground: oklch(0.21 0.013 55);
+  --card: oklch(0.985 0.012 85);
+  --primary: oklch(0.34 0.09 20);
   --primary-foreground: oklch(0.975 0.015 85);
-  --secondary: oklch(0.918 0.026 76);
-  --muted: oklch(0.938 0.017 80);
-  --muted-foreground: oklch(0.46 0.018 50);
+  --secondary: oklch(0.905 0.028 76);
+  --muted: oklch(0.928 0.018 80);
+  --muted-foreground: oklch(0.4 0.02 50);
   --accent: oklch(0.87 0.036 82);
-  --border: oklch(0.77 0.024 71);
-  --destructive: oklch(0.48 0.15 28);
-  --ink-soft: oklch(0.34 0.019 60);
-  --wine-dark: oklch(0.29 0.07 20);
-  --line: color-mix(in oklch, var(--primary) 25%, transparent);
+  --border: oklch(0.68 0.03 71);
+  --destructive: oklch(0.45 0.15 28);
+  --ink-soft: oklch(0.28 0.02 60);
+  --wine-dark: oklch(0.26 0.075 20);
+  --line: color-mix(in oklch, var(--primary) 38%, transparent);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
