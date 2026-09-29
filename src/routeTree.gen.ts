@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as JoinRouteImport } from './routes/join'
+import { Route as NeurodiversityServiceRouteImport } from './routes/neurodiversity-service'
 import { Route as OpportunitiesRouteImport } from './routes/opportunities'
 import { Route as PillarsRouteImport } from './routes/pillars'
 import { Route as PublicationsRouteImport } from './routes/publications'
@@ -43,6 +44,11 @@ const JoinRoute = JoinRouteImport.update({
   path: '/join',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NeurodiversityServiceRoute = NeurodiversityServiceRouteImport.update({
+  id: '/neurodiversity-service',
+  path: '/neurodiversity-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OpportunitiesRoute = OpportunitiesRouteImport.update({
   id: '/opportunities',
   path: '/opportunities',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/join': typeof JoinRoute
+  '/neurodiversity-service': typeof NeurodiversityServiceRoute
   '/opportunities': typeof OpportunitiesRoute
   '/pillars': typeof PillarsRoute
   '/publications': typeof PublicationsRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/join': typeof JoinRoute
+  '/neurodiversity-service': typeof NeurodiversityServiceRoute
   '/opportunities': typeof OpportunitiesRoute
   '/pillars': typeof PillarsRoute
   '/publications': typeof PublicationsRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/join': typeof JoinRoute
+  '/neurodiversity-service': typeof NeurodiversityServiceRoute
   '/opportunities': typeof OpportunitiesRoute
   '/pillars': typeof PillarsRoute
   '/publications': typeof PublicationsRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/events'
     | '/join'
+    | '/neurodiversity-service'
     | '/opportunities'
     | '/pillars'
     | '/publications'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/events'
     | '/join'
+    | '/neurodiversity-service'
     | '/opportunities'
     | '/pillars'
     | '/publications'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/events'
     | '/join'
+    | '/neurodiversity-service'
     | '/opportunities'
     | '/pillars'
     | '/publications'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EventsRoute: typeof EventsRoute
   JoinRoute: typeof JoinRoute
+  NeurodiversityServiceRoute: typeof NeurodiversityServiceRoute
   OpportunitiesRoute: typeof OpportunitiesRoute
   PillarsRoute: typeof PillarsRoute
   PublicationsRoute: typeof PublicationsRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JoinRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/neurodiversity-service': {
+      id: '/neurodiversity-service'
+      path: '/neurodiversity-service'
+      fullPath: '/neurodiversity-service'
+      preLoaderRoute: typeof NeurodiversityServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/opportunities': {
       id: '/opportunities'
       path: '/opportunities'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EventsRoute: EventsRoute,
   JoinRoute: JoinRoute,
+  NeurodiversityServiceRoute: NeurodiversityServiceRoute,
   OpportunitiesRoute: OpportunitiesRoute,
   PillarsRoute: PillarsRoute,
   PublicationsRoute: PublicationsRoute,
