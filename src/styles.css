@@ -183,10 +183,10 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 500; }
   .nav-link { padding: 10px 0; }
   .nav-join { width: 100%; justify-content: center; }
   .hero { grid-template-columns: 1fr; }
-  .hero-copy { padding: 64px 6% 48px; }
-  .hero-title { font-size: clamp(61px, 14vw, 84px); margin: 22px 0; }
-  .hero-visual { min-height: 410px; border-left: 0; border-top: 1px solid var(--line); }
-  .hero-visual img { object-position: center 43%; }
+  .hero-copy { padding: 44px 6% 34px; }
+  .hero-title { font-size: clamp(61px, 14vw, 84px); margin: 18px 0; }
+  .hero-visual { min-height: 245px; height: 245px; border-left: 0; border-top: 1px solid var(--line); }
+  .hero-visual img { object-position: center 44%; }
   .ticker-inner { justify-content: flex-start; font-size: 9px; gap: 8px 15px; }
   .ticker-inner span + span::before { padding-right: 15px; }
   .section { padding: 70px 0; }
