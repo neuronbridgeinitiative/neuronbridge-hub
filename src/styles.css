@@ -218,4 +218,6 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 500; }
 
 .hero-org { font-family: var(--font-display); font-size: clamp(20px, 2vw, 26px); color: var(--wine-dark); letter-spacing: .02em; margin-bottom: 14px; }
 .founding-goal { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); border-top: 1px solid var(--line); padding-top: 14px; margin: 18px 0 22px; }
+.apply-cta { padding-top: 38px; padding-bottom: 10px; }
+@media (max-width: 720px) { .apply-cta { padding-top: 26px; padding-bottom: 6px; } }
 .footer-links a[href^="mailto"] { word-break: break-all; }
