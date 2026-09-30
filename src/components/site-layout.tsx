@@ -14,7 +14,7 @@ export function SiteHeader() {
   return <header className="site-header">
     <div className="site-wrap header-top">
       <Link to="/" className="brand" aria-label="NeuronBridge Initiative home" onClick={() => setOpen(false)}>
-        <span className="brand-mark">N</span><span className="brand-name">NeuronBridge<small>Initiative · UCLA</small></span>
+        <span className="brand-mark">N</span><span className="brand-name">NeuronBridge<small>INITIATIVE AT UCLA</small></span>
       </Link>
       <div className="header-note">A student-led community at the intersection<br />of neuroscience &amp; service</div>
       <Button variant="ghost" size="icon" className="mobile-menu" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>{open ? <X size={21} /> : <Menu size={21} />}</Button>
